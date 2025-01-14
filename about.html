@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Communist Hub</title>
+    <style>
+        :root {
+            --primary-red: #CC0000;
+            --secondary-red: #8B0000;
+            --gold: #FFD700;
+            --off-white: #F5F5F5;
+            --dark-gray: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .navbar {
+            background-color: var(--primary-red);
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--gold);
+            font-size: 2rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--off-white);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .menu-toggle {
+            display: none;
+            color: var(--gold);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .main-content {
+            margin-top: 80px;
+            padding: 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: var(--off-white);
+            min-height: calc(100vh - 80px);
+        }
+
+        .about-section {
+            margin-bottom: 3rem;
+        }
+
+        .about-section h1 {
+            color: var(--primary-red);
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .about-section h2 {
+            color: var(--secondary-red);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+        }
+
+        .about-section p {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            color: var(--dark-gray);
+        }
+
+        .creator-profile {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 2rem;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-red);
+        }
+
+        footer {
+            background-color: var(--primary-red);
+            color: var(--off-white);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+            }
+
+            .menu-toggle {
+                display: block;
+                position: absolute;
+                right: 2rem;
+                top: 1rem;
+            }
+
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                text-align: center;
+                padding: 1rem 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .profile-header {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">☭ Communist Hub</div>
+                <div class="menu-toggle">☰</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="communism.html">What is Communism?</a></li>
+                    <li><a href="documents.html">The Communist Manifesto</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="about-section">
+            <h1>About Communist Hub</h1>
+            <p>Welcome to Communist Hub, a platform dedicated to spreading communism to the younger generation around the world.</p>
+            
+            <div class="creator-profile">
+                <div class="profile-header">
+                    <img src="image2.jpg" alt="Comrade Rohan Dutta" class="profile-image" />
+                    <div>
+                        <h2>Comrade Rohan Dutta</h2>
+                        <p>Creator of the Communist Hub</p>
+                    </div>
+                </div>
+                <p>Comrade Rohan Dutta is a dedicated history enthusiast. While doing his studies in Btech Information Technology, he founded Communist Hub with the vision of creating an interesting place for those interested in learning about communism</p>
+                <p>Through his work, Comrade Dutta wants to spread equality among everyone and fight against global capitalism.</p>
+            </div>
+
+            <h2>Our Vision</h2>
+            <p>At Communist Hub, we believe that education is a fundamental tool for social change. Our platform aims to demystify communist theory and showcase its relevance in addressing contemporary social and economic challenges. We strive to create a space where both newcomers and experienced scholars can engage with communist ideas in a meaningful way.</p>
+
+            <h2>Join Our Community</h2>
+            <p>We welcome all those interested in learning about and discussing communist theory and practice. Whether you're new to these ideas or an experienced scholar, there's a place for you in our community. Together, we can work towards a more equitable and just society.</p>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Communist Hub - All Rights Reserved</p>
+        </div>
+    </footer>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communist Hub</title>
+    <style>
+        :root {
+            --primary-red: #CC0000;
+            --secondary-red: #8B0000;
+            --gold: #FFD700;
+            --off-white: #F5F5F5;
+            --dark-gray: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: var(--off-white);
+        }
+
+        .navbar {
+            background-color: var(--primary-red);
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--gold);
+            font-size: 2rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--off-white);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .menu-toggle {
+            display: none;
+            color: var(--gold);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .welcome-section {
+            padding-top: 80px;
+            min-height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                        url('image1.jpg') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--off-white);
+        }
+
+        .welcome-content {
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .welcome-content h1 {
+            font-size: 3.5rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .welcome-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: var(--primary-red);
+            color: var(--off-white);
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .cta-button:hover {
+            background-color: var(--secondary-red);
+        }
+
+        .videos-section {
+            padding: 4rem 2rem;
+            background-color: var(--dark-gray);
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--gold);
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+        }
+
+        .videos-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 0 1rem;
+        }
+
+        .video-card {
+            background-color: var(--off-white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            height: 100%;
+        }
+
+        .video-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .video-thumbnail {
+            position: relative;
+            width: 100%;
+            background: var(--dark-gray);
+        }
+
+        .video-thumbnail video {
+            width: 100%;
+            height: auto;
+            display: block;
+            background: var(--dark-gray);
+        }
+
+        .video-info {
+            padding: 1.5rem;
+        }
+
+
+        .video-info h3 {
+            color: var(--primary-red);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .video-info p {
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: var(--primary-red);
+            color: var(--off-white);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+            }
+
+            .menu-toggle {
+                display: block;
+                position: absolute;
+                right: 2rem;
+                top: 1rem;
+            }
+
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                text-align: center;
+                padding: 1rem 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .welcome-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .welcome-content p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">☭ Communist Hub</div>
+                <div class="menu-toggle">☰</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="communism.html">What is Communism?</a></li>
+                    <li><a href="documents.html">The Communist Manifesto</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="welcome-section">
+        <div class="welcome-content">
+            <h1>Welcome Comrades</h1>
+            <p>Explore the history, philosophy, and principles of Communism. Join us in understanding the movement that shaped the 20th century and continues to fight against Global Capitalism.</p>
+            <a href="communism.html" class="cta-button">Learn More</a>
+        </div>
+    </section>
+
+    <section class="videos-section">
+        <h2 class="section-title">Featured Content</h2>
+        <div class="videos-grid">
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    <video src="video1.mp4" controls alt="video1">
+                </div>
+                <div class="video-info">
+                    <h3>All Hail the Motherland!!!</h3>
+                    <p>Workers of the world, unite!</p>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    <video src="video2.mp4" controls alt="video2">
+                </div>
+                <div class="video-info">
+                    <h3>All Hail Kim Dynasty</h3>
+                    <p>North Korean Propaganda Video</p>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    <video src="video3.mp4" controls alt="video3">
+                </div>
+                <div class="video-info">
+                    <h3>Mao Zedong</h3>
+                    <p>Red Sun in the Sky</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Communist Hub - All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communism</title>
+    <style>
+        :root {
+            --primary-red: #CC0000;
+            --secondary-red: #8B0000;
+            --gold: #FFD700;
+            --off-white: #F5F5F5;
+            --dark-gray: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .navbar {
+            background-color: var(--primary-red);
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--gold);
+            font-size: 2rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--off-white);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .menu-toggle {
+            display: none;
+            color: var(--gold);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* New styles for content sections */
+        .main-content {
+            margin-top: 80px;
+            padding: 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+            background-color: var(--off-white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            color: var(--primary-red);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 0.5rem;
+        }
+
+        .section p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            color: var(--dark-gray);
+        }
+
+        .country-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .country-card {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .country-card h3 {
+            color: var(--primary-red);
+            margin-bottom: 1rem;
+        }
+
+        .country-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: var(--primary-red);
+            color: var(--off-white);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+            }
+
+            .menu-toggle {
+                display: block;
+                position: absolute;
+                right: 2rem;
+                top: 1rem;
+            }
+
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                text-align: center;
+                padding: 1rem 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .main-content {
+                padding: 1rem;
+            }
+
+            .section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">☭ Communist Hub</div>
+                <div class="menu-toggle">☰</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="communism.html">What is Communism?</a></li>
+                    <li><a href="documents.html">The Communist Manifesto</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="section">
+            <h2>About Communism</h2>
+            <p>Communism is a philosophical, social, political, and economic ideology and movement whose goal is the establishment of a communist society, namely a socioeconomic order structured upon the ideas of common or social ownership of all property and the absence of social classes, money, and the state.</p>
+            <p>The ideology seeks to overcome the class struggle by creating a society in which the means of production are commonly owned and controlled by the community as a whole, rather than by private individuals or corporations.</p>
+            <p>Key principles of communist theory include:</p>
+            <p>• Class Struggle: The idea that history is shaped by conflicts between classes, primarily the proletariat (working class) and the bourgeoisie (capitalist class). The aim is to abolish class distinctions.<br>
+            • Collective Ownership: The means of production (factories, land, resources) should be owned collectively or by the state to prevent exploitation by private owners.<br>
+            • Abolition of Private Property: Private ownership of the means of production is seen as a source of inequality and should be replaced with communal ownership.<br>
+            • Centralized Planning: Economic decisions should be made collectively or by the state to ensure equitable distribution of resources and eliminate market inefficiencies.<br>
+            • Distribution Based on Need: Resources and goods should be distributed according to individual needs rather than through market mechanisms or ability to pay.<br>
+            • Internationalism: Solidarity among the working class globally, transcending national borders, to achieve a worldwide communist system.</p>
+        </section>
+
+        <section class="section">
+            <h2>Current Communist Governments</h2>
+            <p>While pure communism as envisioned by Marx and Engels has never been fully implemented, several countries today are governed by communist parties that embrace various forms of socialism and communist ideology:</p>
+            
+            <div class="country-grid">
+                <div class="country-card">
+                    <img src="image3.jpg" alt="China" class="country-image"/>
+                    <h3>People's Republic of China</h3>
+                    <p>Founded in 1949 under the leadership of Mao Zedong and the Communist Party of China (CPC), the PRC is a one-party socialist state. The People's Republic of China stands as a powerful testament to the potential of communism in driving national development and collective well-being. Under the leadership of the Communist Party of China, the country has achieved unparalleled economic growth, lifting over 800 million people out of poverty, advancing technological innovation, and ensuring widespread access to education and healthcare. Its focus on equality, long-term planning, and collective prosperity has fostered stability and global influence, offering a unique model of governance that prioritizes the well-being of society as a whole while preserving cultural heritage and promoting international cooperation.</p>
+                </div>
+                <div class="country-card">
+                    <img src="image4.webp" alt="Vietnam" class="country-image"/>
+                    <h3>Socialist Republic of Vietnam</h3>
+                    <p>
+                        The Socialist Republic of Vietnam stands as a remarkable example of how socialist principles can drive national resilience, development, and equity. Guided by the Communist Party of Vietnam since its reunification in 1976, the country has transformed into a rapidly growing economy while maintaining a strong commitment to social welfare. Vietnam’s Đổi Mới (Renovation) reforms, introduced in 1986, blend socialist ideals with market-oriented policies, achieving impressive poverty reduction, robust economic growth, and improvements in healthcare and education. The nation prioritizes equality, cultural heritage, and international cooperation, reflecting its dedication to collective progress. Vietnam’s model demonstrates the adaptability and enduring relevance of socialism in creating an equitable and prosperous society.</p>
+                </div>
+                <div class="country-card">
+                    <img src="image7.jpg" alt="North Korea" class="country-image"/>
+                    <h3>Democratic People's Republic of Korea</h3>
+                    <p>The Democratic People's Republic of Korea (DPRK), commonly known as North Korea, is governed by the principles of Juche, a form of self-reliance and socialism introduced by Kim Il-sung. Since its establishment in 1948, the country has prioritized national independence, economic self-sufficiency, and social equality. The government emphasizes central planning, state ownership of resources, and the mobilization of its people to achieve economic and military strength. Despite facing significant challenges, including international sanctions and economic isolation, North Korea remains committed to maintaining a socialist society that upholds the collective good, emphasizing the role of the state in guiding the nation's development and ensuring the welfare of its citizens.</p>
+                </div>
+                <div class="country-card">
+                    <img src="image5.jpg" alt="Lao People" class="country-image"/>
+                    <h3>Lao People's Democratic Republic</h3>
+                    <p>The Lao People's Democratic Republic (Lao PDR) is a nation that exemplifies the principles of socialism and collective progress. Since its establishment in 1975 under the leadership of the Lao People's Revolutionary Party, the country has focused on national unity, poverty reduction, and sustainable development. Lao PDR has made significant strides in improving education, healthcare, and infrastructure, particularly through initiatives like the National Socio-Economic Development Plan (NSEDP). Its commitment to equality and collective welfare is reflected in its efforts to empower rural communities and reduce disparities. By prioritizing harmony, cultural preservation, and regional cooperation, Lao PDR serves as an inspiring example of how socialist values can guide a nation's path toward progress and inclusivity.</p>
+                </div>
+                <div class="country-card">
+                    <img src="image6.jpg" alt="Cuba" class="country-image"/>
+                    <h3>Republic of Cuba</h3>
+                    <p> The country became a socialist state after the Cuban Revolution in 1959, led by Fidel Castro and Che Guevara, overthrowing the Batista regime. It has a centrally planned economy and is known for achievements in healthcare and education. Cuba's political system is one-party, led by the Communist Party of Cuba.The Republic of Cuba has long been shaped by its commitment to socialist principles, focusing on social justice, equality, and collective well-being. Since the revolution in 1959, Cuba has prioritized universal access to healthcare, education, and social services, making significant strides in improving quality of life for its people. Despite economic challenges, the country has maintained a strong focus on sustainability, food security, and social equity, resisting the inequalities often associated with capitalist systems. Cuba’s approach to governance, rooted in socialist ideals, emphasizes grassroots participation, communal collaboration, and the protection of cultural identity, serving as a model of resilience and solidarity in the face of global pressures.</p>
+                </div>
+                <div class="country-card">
+                    <img src="image8.jpg" alt="Soviet Union" class="country-image"/>
+                    <h3>USSR</h3>
+                    <p>The Union of Soviet Socialist Republics (USSR), established in 1922, was a pioneering experiment in socialist governance and economic organization. Built on the ideals of Marxism-Leninism, the USSR aimed to create a classless society by abolishing private property and redistributing wealth. Under the leadership of the Communist Party, the country focused on central economic planning, state-owned industries, and collective agriculture, achieving significant industrialization and social advancements like free healthcare, education, and cultural development. However, the USSR faced challenges such as political repression and ethnic tensions, ultimately leading to its dissolution in 1991. Despite this, the USSR remains a key historical reference for discussions on socialism, state-led development, and international influence.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Communist Hub - All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

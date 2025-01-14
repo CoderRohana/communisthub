@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documents</title>
+    <style>
+        :root {
+            --primary-red: #CC0000;
+            --secondary-red: #8B0000;
+            --gold: #FFD700;
+            --off-white: #F5F5F5;
+            --dark-gray: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: var(--off-white);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navbar {
+            background-color: var(--primary-red);
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--gold);
+            font-size: 2rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--off-white);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .menu-toggle {
+            display: none;
+            color: var(--gold);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            margin-top: 80px;
+            padding: 2rem;
+            flex-grow: 1;
+        }
+
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            color: var(--primary-red);
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .pdf-library {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .pdf-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .pdf-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .pdf-title {
+            color: var(--dark-gray);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .pdf-author {
+            color: var(--secondary-red);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .pdf-download {
+            display: inline-block;
+            background-color: var(--primary-red);
+            color: var(--off-white);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .pdf-download:hover {
+            background-color: var(--secondary-red);
+        }
+
+        footer {
+            background-color: var(--primary-red);
+            color: var(--off-white);
+            text-align: center;
+            padding: 2rem;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+            }
+
+            .menu-toggle {
+                display: block;
+                position: absolute;
+                right: 2rem;
+                top: 1rem;
+            }
+
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                text-align: center;
+                padding: 1rem 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .pdf-library {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">☭ Communist Hub</div>
+                <div class="menu-toggle">☰</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="communism.html">What is Communism?</a></li>
+                    <li><a href="documents.html">The Communist Manifesto</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="content-container">
+            <h1 class="section-title">Revolutionary Library</h1>
+            <div class="pdf-library">
+                <div class="pdf-card">
+                    <h3 class="pdf-title">The Communist Manifesto</h3>
+                    <p class="pdf-author">Karl Marx & Friedrich Engels</p>
+                    <a href="Manifesto.pdf" class="pdf-download">Download PDF</a>
+                </div>
+                <div class="pdf-card">
+                    <h3 class="pdf-title">Das Kapital Vol 1</h3>
+                    <p class="pdf-author">Karl Marx</p>
+                    <a href="Capital-Volume-I.pdf" class="pdf-download">Download PDF</a>
+                </div>
+                <div class="pdf-card">
+                    <h3 class="pdf-title">Das Kapital Vol 2</h3>
+                    <p class="pdf-author">Karl Marx</p>
+                    <a href="Capital-Volume-II.pdf" class="pdf-download">Download PDF</a>
+                </div>
+                <div class="pdf-card">
+                    <h3 class="pdf-title">Das Kapital Vol 3</h3>
+                    <p class="pdf-author">Karl Marx</p>
+                    <a href="Capital-Volume-III.pdf" class="pdf-download">Download PDF</a>
+                </div>
+                <div class="pdf-card">
+                    <h3 class="pdf-title">State and Revolution</h3>
+                    <p class="pdf-author">Vladimir Lenin</p>
+                    <a href="state-and-revolution.pdf" class="pdf-download">Download PDF</a>
+                </div>
+                <div class="pdf-card">
+                    <h3 class="pdf-title">Foundations of Leninism</h3>
+                    <p class="pdf-author">Joseph Stalin</p>
+                    <a href="C01-Foundations-of-Leninism.pdf" class="pdf-download">Download PDF</a>
+                </div>
+                <div class="pdf-card">
+                    <h3 class="pdf-title">Reform or Revolution?</h3>
+                    <p class="pdf-author">Rosa Luxemburg</p>
+                    <a href="C03-Reform-or-Revolution.pdf" class="pdf-download">Download PDF</a>
+                </div> 
+                <div class="pdf-card">
+                    <h3 class="pdf-title">Quotations from Chairman Mao</h3>
+                    <p class="pdf-author">Mao Zedong</p>
+                    <a href="Quotations_from_Chairman_Mao_Tse-tung.pdf" class="pdf-download">Download PDF</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Communist Hub - All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
